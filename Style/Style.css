@@ -1,0 +1,171 @@
+/* Style général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal */
+.container {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo Netflix */
+.logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+/* Bouton pour afficher la recherche */
+#show-search-button {
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #e50914, #ff2e63);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+#show-search-button:hover {
+    transform: scale(1.1);
+}
+
+/* Barre de recherche (cachée au début) */
+#search-box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animation quand la recherche apparaît */
+#search-box.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Input de recherche */
+#search-input {
+    width: 50%;
+    padding: 12px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 50px;
+    outline: none;
+    text-align: center;
+}
+
+/* Bouton recherche */
+#search-button {
+    padding: 12px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #e50914, #ff2e63);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+#search-button:hover {
+    transform: scale(1.1);
+}
+
+/* Résultats des films */
+#results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Carte du film */
+.movie-card {
+    width: 220px;
+    margin: 15px;
+    background: #111;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.movie-card:hover {
+    transform: scale(1.1);
+}
+
+/* Affiche du film */
+.movie-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    background: #222;
+}
+
+/* Bouton Voir détails */
+.movie-card button {
+    padding: 10px;
+    width: 100%;
+    background: linear-gradient(45deg, #e50914, #ff2e63);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 0 15px 15px;
+    transition: 0.3s;
+}
+
+.movie-card button:hover {
+    transform: scale(1.05);
+}
+
+/* Détails du film */
+#movie-details-container {
+    display: none;
+    max-width: 600px;
+    margin: auto;
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+    text-align: center;
+}
+/* Bouton Retour stylé comme Netflix */
+#movie-details-container button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #e50914, #ff2e63);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 15px rgba(229, 9, 20, 0.7);
+}
+
+#movie-details-container button:hover {
+    background: linear-gradient(45deg, #ff2e63, #e50914);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 25px rgba(229, 9, 20, 1);
+}
